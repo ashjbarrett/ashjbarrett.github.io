@@ -111,32 +111,29 @@
       font-style: italic;
     }
 
+    /* === FOOTER === */
     footer {
       text-align: center;
       border-top: 1px solid #ccc;
-      padding: 12px 0 10px;
-      margin-top: 10px;
-      white-space: nowrap; /* prevent wrapping */
-      overflow-x: auto; /* allow subtle horizontal scroll if needed */
+      padding-top: 14px;
+      line-height: 1.8;
+      margin-bottom: 10px;
     }
 
-    .contact-bar {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2.5rem;
+    .footer-line {
+      margin: 4px 0;
     }
 
-    .contact-bar a,
-    .contact-bar span {
+    .footer-line a,
+    .footer-line span {
       color: #111;
       text-decoration: none;
       font-weight: 500;
       position: relative;
-      flex-shrink: 0;
+      margin: 0 8px;
     }
 
-    .contact-bar a::after {
+    .footer-line a::after {
       content: "";
       position: absolute;
       left: 0;
@@ -147,7 +144,7 @@
       transition: width 0.25s ease-in-out;
     }
 
-    .contact-bar a:hover::after {
+    .footer-line a:hover::after {
       width: 100%;
     }
   </style>
@@ -190,12 +187,18 @@
   </main>
 
   <footer>
-    <div class="contact-bar">
-      <a href="https://x.com/ashbarrettt">X</a>
+    <div class="footer-line">
+      <a href="https://x.com/ashbarrettt">X</a> |
       <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
-      <a href="mailto:ash@build.ai">ash@build.ai</a>
-      <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a>
+    </div>
+
+    <div class="footer-line">
+      <a href="mailto:ash@build.ai">ash@build.ai</a> |
+      <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a> |
       <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
+    </div>
+
+    <div class="footer-line">
       <span>913-293-8404</span>
     </div>
   </footer>
