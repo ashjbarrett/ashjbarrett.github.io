@@ -9,8 +9,8 @@
   <style>
     body {
       font-family: 'IBM Plex Mono', monospace;
-      font-size: 12px;
-      line-height: 1.8;
+      font-size: 14px;
+      line-height: 1.9; /* slightly more line height */
       color: #111;
       background-color: #fff;
       margin: 80px auto;
@@ -21,34 +21,53 @@
       min-height: 100vh;
     }
 
-    /* NAVIGATION */
-    nav {
-      text-align: center;
+    /* ==== HEADER ==== */
+    header {
       margin-bottom: 60px;
     }
 
-    nav a {
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      border-bottom: 2px solid #000;
+      display: inline-block;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+
+    /* ==== GLOBAL LINK UNDERLINE SLIDE-IN ==== */
+    a {
       position: relative;
       color: #000;
       text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
+      font-weight: 500;
       transition: color 0.2s ease;
     }
 
-    nav a::after {
+    a::after {
       content: "";
       position: absolute;
       left: 0;
       bottom: -2px;
       width: 0%;
-      height: 2px;
+      height: 1.5px;
       background-color: #000;
       transition: width 0.25s ease-in-out;
     }
 
-    nav a:hover::after {
+    a:hover::after {
       width: 100%;
+    }
+
+    /* ==== NAV ==== */
+    nav {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      font-weight: 600;
     }
 
     nav span {
@@ -60,11 +79,11 @@
     }
 
     p {
-      margin: 24px 0;
+      margin: 32px 0; /* extra spacing between sentences */
     }
 
     ul {
-      margin: 10px 0 24px 22px;
+      margin: 10px 0 28px 22px;
       padding: 0;
     }
 
@@ -76,8 +95,6 @@
       margin-top: 3rem;
       text-align: center;
       font-style: italic;
-      font-size: inherit;
-      font-weight: normal;
     }
 
     footer {
@@ -86,26 +103,26 @@
       padding-bottom: 20px;
     }
 
-    .contact {
+    .footer-section {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 2rem;
-      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
 
-    .contact a,
-    .contact span {
+    .footer-section a,
+    .footer-section span {
       text-decoration: none;
       color: #111;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Ash Barrett</h1>
+  </header>
 
   <nav>
     <a href="index.html"><strong>home</strong></a> <span>|</span> <a href="blog.html">blog</a>
@@ -141,12 +158,16 @@
   </main>
 
   <footer>
-    <div class="contact">
+    <div class="footer-section">
       <a href="https://x.com/ashbarrettt">X</a>
       <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
+    </div>
+    <div class="footer-section">
       <a href="mailto:ash@build.ai">ash@build.ai</a>
       <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a>
       <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
+    </div>
+    <div class="footer-section">
       <span>913-293-8404</span>
     </div>
   </footer>
