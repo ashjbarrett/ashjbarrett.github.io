@@ -21,10 +21,10 @@
       min-height: 100vh;
     }
 
-    /* === GLOBAL LINK UNDERLINE SLIDE-IN === */
+    /* === GLOBAL LINK STYLE + SLIDE-IN UNDERLINE === */
     a {
       position: relative;
-      color: #000;
+      color: #0055ff; /* distinct blue for clear link visibility */
       text-decoration: none;
       font-weight: 500;
       transition: color 0.2s ease;
@@ -37,7 +37,7 @@
       bottom: -2px;
       width: 0%;
       height: 1.5px;
-      background-color: #000;
+      background-color: #0055ff;
       transition: width 0.25s ease-in-out;
     }
 
@@ -54,6 +54,11 @@
     nav a {
       margin: 0 10px;
       font-weight: 600;
+      color: #000;
+    }
+
+    nav a::after {
+      background-color: #000;
     }
 
     nav span {
@@ -64,12 +69,13 @@
       flex: 1;
     }
 
+    /* === TEXT SPACING === */
     p {
-      margin: 24px 0;
+      margin: 28px 0;
     }
 
     ul {
-      margin: 10px 0 24px 22px;
+      margin: -10px 0 24px 22px; /* pulls list closer to previous paragraph */
       padding: 0;
     }
 
@@ -83,24 +89,45 @@
       font-style: italic;
     }
 
+    /* === FOOTER === */
     footer {
       text-align: center;
       margin-top: 60px;
       padding-bottom: 20px;
     }
 
-    .footer-section {
+    .contact-bar {
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-wrap: wrap;
       gap: 2rem;
-      margin-bottom: 1rem;
+      margin-top: 1rem;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
     }
 
-    .footer-section a,
-    .footer-section span {
-      text-decoration: none;
+    .contact-bar a,
+    .contact-bar span {
       color: #111;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .contact-bar a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 1.5px;
+      background-color: #111;
+      transition: width 0.25s ease-in-out;
+    }
+
+    .contact-bar a:hover::after {
+      width: 100%;
     }
   </style>
 </head>
@@ -118,14 +145,12 @@
     <p>I dropped out of <a href="https://www.ucla.edu/">UCLA</a> (Political Science/Philosophy; 4.0 GPA).</p>
 
     <p>I am the Chief of Staff at <a href="https://www.build.ai/">Build</a>.</p>
-
     <ul>
       <li>We believe that large-scale 3D world data will solve embodied AI.</li>
       <li>We’re backed by HF0, Abstract Ventures, Pear VC, Z Fellows, and other great partners.</li>
     </ul>
 
     <p>I am the president of <a href="https://www.sigmaetapi.org/">Sigma Eta Pi</a>, UCLA's Premier Co-Ed Professional Entrepreneurship Fraternity.</p>
-
     <ul>
       <li>We host YC founders, HF0 residents, ODF fellows, Techstars founders, and KP fellows who have raised a collective $1.2B.</li>
     </ul>
@@ -140,16 +165,12 @@
   </main>
 
   <footer>
-    <div class="footer-section">
+    <div class="contact-bar">
       <a href="https://x.com/ashbarrettt">X</a>
       <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
-    </div>
-    <div class="footer-section">
       <a href="mailto:ash@build.ai">ash@build.ai</a>
       <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a>
       <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
-    </div>
-    <div class="footer-section">
       <span>913-293-8404</span>
     </div>
   </footer>
