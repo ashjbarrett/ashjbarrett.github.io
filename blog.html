@@ -79,13 +79,14 @@
       border-top: 1px solid #ccc;
       padding: 12px 0 10px;
       width: 100%;
+      white-space: nowrap;
+      overflow-x: auto;
     }
 
     .contact-bar {
-      display: flex;
+      display: inline-flex;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
       gap: 2.5rem;
     }
 
@@ -95,6 +96,7 @@
       text-decoration: none;
       font-weight: 500;
       position: relative;
+      flex-shrink: 0;
     }
 
     .contact-bar a::after {
