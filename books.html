@@ -15,7 +15,9 @@
       margin: 60px auto;
       max-width: 720px;
       padding: 0 20px;
-      text-align: left;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     nav {
@@ -56,7 +58,7 @@
     em {
       display: block;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px; /* Added more space here */
       font-style: italic;
     }
 
@@ -68,6 +70,44 @@
 
     li {
       margin-bottom: 8px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: auto;
+      padding-bottom: 20px;
+    }
+
+    .contact-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      border-top: 1px solid #ccc;
+      padding-top: 15px;
+    }
+
+    .contact-bar a,
+    .contact-bar span {
+      color: #111;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .contact-bar a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0%;
+      height: 1px;
+      background-color: #111;
+      transition: width 0.25s ease-in-out;
+    }
+
+    .contact-bar a:hover::after {
+      width: 100%;
     }
   </style>
 </head>
@@ -94,5 +134,8 @@
     <li>Zero To One</li>
   </ul>
 
-</body>
-</html>
+  <footer>
+    <div class="contact-bar">
+      <a href="https://x.com/ashbarrettt">X</a>
+      <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
+      <a href="mailto:ash@bu
