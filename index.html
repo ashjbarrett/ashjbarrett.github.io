@@ -9,33 +9,65 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.8;
       color: #111;
       background-color: #fff;
       margin: 100px auto;
       max-width: 720px;
       padding: 0 20px;
     }
+
     strong {
       font-weight: 600;
     }
+
     a {
       color: #0000EE;
       text-decoration: underline;
     }
+
     ul {
       margin: 10px 0 24px 22px;
       padding: 0;
     }
+
     li {
       margin-bottom: 6px;
     }
+
     p {
-      margin: 16px 0;
+      margin: 24px 0; /* adds visual separation between paragraphs */
     }
+
     footer {
-      margin-top: 40px;
-      line-height: 1.5;
+      margin-top: 60px;
+      line-height: 1.7;
+    }
+
+    .final-line {
+      margin-top: 3rem;
+      text-align: center;
+      font-style: italic;
+      font-size: inherit;
+      font-weight: normal;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem; /* equal spacing between contact items */
+      margin-top: 1rem;
+    }
+
+    .contact a,
+    .contact span {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -43,23 +75,22 @@
 
   <p><strong>I'm Ash Barrett.</strong></p>
 
-  <p>I want to build leverage to enact change at a global scale. I posit that this is done through technology and its governance.</p>
+  <p>I want to build leverage to enact change at a global scale. I believe this is done through technology and its governance.</p>
 
-  <p>I dropped out of <a href="https://www.ucla.edu/">UCLA</a> (Political Science/Philosophy ; 4.0 GPA) </p>
+  <p>I dropped out of <a href="https://www.ucla.edu/">UCLA</a> (Political Science/Philosophy; 4.0 GPA).</p>
 
-  <p>I am the Chief of Staff at <a href="https://www.build.ai/">build</a> </p>
+  <p>I am the Chief of Staff at <a href="https://www.build.ai/">Build</a>.</p>
 
   <ul>
     <li>We believe that large-scale 3D world data will solve embodied AI.</li>
-    <li>We’re backed by HF0, Abstract Ventures, Pear VC, ZFellows, and other great partners.</li>
+    <li>We’re backed by HF0, Abstract Ventures, Pear VC, Z Fellows, and other great partners.</li>
   </ul>
 
   <p>I am the president of <a href="https://www.sigmaetapi.org/">Sigma Eta Pi</a>, UCLA's Premier Co-Ed Professional Entrepreneurship Fraternity.</p>
- 
+
   <ul>
-    <li>We host YC founders, HFO residents, ODF fellows, Techstars founders, and KP fellows who have raised a collective $1.2B.</li>
+    <li>We host YC founders, HF0 residents, ODF fellows, Techstars founders, and KP fellows who have raised a collective $1.2B.</li>
   </ul>
-  
 
   <p>I wrote policy and commentary on digital and technological governance for <a href="https://www.dentons.com/en/">Dentons</a>. It is currently hard-copied in Antitrust Reviews in the Czech Republic.</p>
 
@@ -67,20 +98,17 @@
 
   <p>I did <a href="https://www.linkedin.com/company/nivo-home/">sales</a> and debate. If I can't sell, I will just keep talking.</p>
 
-  
-<p style="margin-top: 3rem; text-align: center; font-style: italic;">
-  I want to learn. I want to have asymmetric impact.
-</p>
-  
+  <p class="final-line">I want to learn. I want to have asymmetric impact.</p>
+
   <footer>
-    <p>
-      <a href="https://x.com/ashbarrettt">X</a> | 
+    <div class="contact">
+      <a href="https://x.com/ashbarrettt">X</a>
       <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
-    </p>
-    <p>
-      ash@build.ai | ashjbarrett@gmail.com | ashbarrett@ucla.edu<br>
-      913-293-8404
-    </p>
+      <a href="mailto:ash@build.ai">ash@build.ai</a>
+      <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a>
+      <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
+      <span>913-293-8404</span>
+    </div>
   </footer>
 
 </body>
