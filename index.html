@@ -7,24 +7,31 @@
   <link rel="icon" type="image/jpeg" href="image.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
       line-height: 1.8;
       color: #111;
       background-color: #fff;
-      margin: 60px auto;
       max-width: 720px;
+      margin: 0 auto;
       padding: 0 20px;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      justify-content: space-between;
+      text-align: left;
+      overflow: hidden; /* prevents scrolling */
     }
 
-    /* === NAVIGATION === */
     nav {
       text-align: center;
-      margin-bottom: 50px;
+      margin-top: 40px;
       letter-spacing: 0.02em;
     }
 
@@ -59,15 +66,16 @@
 
     main {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    /* === LINKS === */
     a {
-      position: relative;
       color: #0055ff;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.2s ease;
+      position: relative;
     }
 
     a::after {
@@ -85,31 +93,28 @@
       width: 100%;
     }
 
-    /* === TEXT === */
     p {
-      margin: 20px 0;
+      margin: 14px 0;
     }
 
     ul {
-      margin: -8px 0 20px 20px;
+      margin: -4px 0 12px 20px;
       padding: 0;
     }
 
     li {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .final-line {
-      margin-top: 2rem;
+      margin-top: 1rem;
       text-align: center;
       font-style: italic;
     }
 
-    /* === FOOTER === */
     footer {
       text-align: center;
-      margin-top: 50px;
-      padding-bottom: 20px;
+      margin-bottom: 20px;
     }
 
     .contact-bar {
@@ -118,9 +123,8 @@
       align-items: center;
       flex-wrap: wrap;
       gap: 1.5rem;
-      margin-top: 1rem;
       border-top: 1px solid #ccc;
-      padding-top: 15px;
+      padding-top: 12px;
     }
 
     .contact-bar a,
@@ -160,7 +164,7 @@
 
     <p>I want to build leverage to enact change at a global scale. I believe this is done through technology and its governance.</p>
 
-    <p>I dropped out of <a href="https://www.ucla.edu/">UCLA</a> (Political Science/Philosophy; 4.0 GPA).</p>
+    <p>I left <a href="https://www.ucla.edu/">UCLA</a> (Political Science/Philosophy; 4.0 GPA) in the fall to build.</p>
 
     <p>I am the Chief of Staff at <a href="https://www.build.ai/">Build</a>.</p>
     <ul>
