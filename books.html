@@ -24,11 +24,13 @@
       justify-content: space-between;
       align-items: center;
       text-align: center;
-      overflow: hidden; /* ensures scroll-free layout */
+      overflow: hidden;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     nav {
-      text-align: center;
       margin-top: 40px;
       letter-spacing: 0.02em;
     }
@@ -86,30 +88,30 @@
       margin-bottom: 8px;
     }
 
+    /* === FOOTER === */
     footer {
       text-align: center;
-      margin-bottom: 20px;
+      border-top: 1px solid #ccc;
+      padding-top: 14px;
+      line-height: 1.8;
+      margin-bottom: 10px;
       width: 100%;
     }
 
-    .contact-bar {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      border-top: 1px solid #ccc;
-      padding-top: 15px;
+    .footer-line {
+      margin: 4px 0;
     }
 
-    .contact-bar a,
-    .contact-bar span {
+    .footer-line a,
+    .footer-line span {
       color: #111;
       text-decoration: none;
       font-weight: 500;
       position: relative;
+      margin: 0 8px;
     }
 
-    .contact-bar a::after {
+    .footer-line a::after {
       content: "";
       position: absolute;
       left: 0;
@@ -120,7 +122,7 @@
       transition: width 0.25s ease-in-out;
     }
 
-    .contact-bar a:hover::after {
+    .footer-line a:hover::after {
       width: 100%;
     }
   </style>
@@ -152,12 +154,18 @@
   </main>
 
   <footer>
-    <div class="contact-bar">
-      <a href="https://x.com/ashbarrettt">X</a>
+    <div class="footer-line">
+      <a href="https://x.com/ashbarrettt">X</a> |
       <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
-      <a href="mailto:ash@build.ai">ash@build.ai</a>
-      <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a>
+    </div>
+
+    <div class="footer-line">
+      <a href="mailto:ash@build.ai">ash@build.ai</a> |
+      <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a> |
       <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
+    </div>
+
+    <div class="footer-line">
       <span>913-293-8404</span>
     </div>
   </footer>
