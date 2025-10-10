@@ -7,23 +7,29 @@
   <link rel="icon" type="image/jpeg" href="image.jpeg">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
       line-height: 1.8;
       color: #111;
       background-color: #fff;
-      margin: 0 auto;
-      max-width: 720px;
-      padding: 60px 20px 0 20px;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      overflow: hidden; /* ensures scroll-free layout */
     }
 
     nav {
       text-align: center;
-      margin-bottom: 50px;
+      margin-top: 40px;
       letter-spacing: 0.02em;
     }
 
@@ -58,19 +64,21 @@
 
     main {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     em {
       display: block;
-      text-align: center;
-      margin-bottom: 35px;
       font-style: italic;
+      margin-bottom: 35px;
     }
 
     ul {
       list-style-type: none;
       padding-left: 0;
-      text-align: center;
       margin: 0;
     }
 
@@ -80,8 +88,8 @@
 
     footer {
       text-align: center;
-      margin-top: 40px;
-      padding-bottom: 20px;
+      margin-bottom: 20px;
+      width: 100%;
     }
 
     .contact-bar {
@@ -126,20 +134,21 @@
   </nav>
 
   <main>
-    <em>Ash's 10 Favorite Books (in no particular order)</em>
-
-    <ul>
-      <li>Escaping the Build Trap</li>
-      <li>If You're Reading This, It's Too Late</li>
-      <li>Project Hail Mary</li>
-      <li>Shoe Dog</li>
-      <li>Steve Jobs</li>
-      <li>The Alchemist</li>
-      <li>The Almanack of Naval Ravikant</li>
-      <li>The Lean Startup</li>
-      <li>Where the Wild Things Are</li>
-      <li>Zero To One</li>
-    </ul>
+    <div>
+      <em>Ash's 10 Favorite Books (in no particular order)</em>
+      <ul>
+        <li>Escaping the Build Trap</li>
+        <li>If You're Reading This, It's Too Late</li>
+        <li>Project Hail Mary</li>
+        <li>Shoe Dog</li>
+        <li>Steve Jobs</li>
+        <li>The Alchemist</li>
+        <li>The Almanack of Naval Ravikant</li>
+        <li>The Lean Startup</li>
+        <li>Where the Wild Things Are</li>
+        <li>Zero To One</li>
+      </ul>
+    </div>
   </main>
 
   <footer>
