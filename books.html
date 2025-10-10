@@ -12,9 +12,9 @@
       line-height: 1.8;
       color: #111;
       background-color: #fff;
-      margin: 60px auto;
+      margin: 0 auto;
       max-width: 720px;
-      padding: 0 20px;
+      padding: 60px 20px 0 20px;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -55,10 +55,14 @@
       font-weight: 600;
     }
 
+    main {
+      flex: 1;
+    }
+
     em {
       display: block;
       text-align: center;
-      margin-bottom: 30px; /* Added more space here */
+      margin-bottom: 35px; /* added extra space under heading */
       font-style: italic;
     }
 
@@ -66,6 +70,7 @@
       list-style-type: none;
       padding-left: 0;
       text-align: center;
+      margin: 0;
     }
 
     li {
@@ -74,7 +79,7 @@
 
     footer {
       text-align: center;
-      margin-top: auto;
+      margin-top: 40px;
       padding-bottom: 20px;
     }
 
@@ -119,23 +124,33 @@
     <a href="books.html" class="active">books</a>
   </nav>
 
-  <em>Ash's 10 Favorite Books (in no particular order)</em>
+  <main>
+    <em>Ash's 10 Favorite Books (in no particular order)</em>
 
-  <ul>
-    <li>Escaping the Build Trap</li>
-    <li>If You're Reading This, It's Too Late</li>
-    <li>Project Hail Mary</li>
-    <li>Shoe Dog</li>
-    <li>Steve Jobs</li>
-    <li>The Alchemist</li>
-    <li>The Almanack of Naval Ravikant</li>
-    <li>The Lean Startup</li>
-    <li>Where the Wild Things Are</li>
-    <li>Zero To One</li>
-  </ul>
+    <ul>
+      <li>Escaping the Build Trap</li>
+      <li>If You're Reading This, It's Too Late</li>
+      <li>Project Hail Mary</li>
+      <li>Shoe Dog</li>
+      <li>Steve Jobs</li>
+      <li>The Alchemist</li>
+      <li>The Almanack of Naval Ravikant</li>
+      <li>The Lean Startup</li>
+      <li>Where the Wild Things Are</li>
+      <li>Zero To One</li>
+    </ul>
+  </main>
 
   <footer>
     <div class="contact-bar">
       <a href="https://x.com/ashbarrettt">X</a>
       <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
-      <a href="mailto:ash@bu
+      <a href="mailto:ash@build.ai">ash@build.ai</a>
+      <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a>
+      <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
+      <span>913-293-8404</span>
+    </div>
+  </footer>
+
+</body>
+</html>
