@@ -5,25 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ash Barrett</title>
   <link rel="icon" type="image/jpeg" href="image.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'IBM Plex Mono', monospace;
       font-size: 18px;
       line-height: 1.8;
       color: #111;
       background-color: #fff;
-      margin: 100px auto;
+      margin: 80px auto;
       max-width: 720px;
       padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    strong {
+    /* NAVIGATION */
+    nav {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    nav a {
+      position: relative;
+      color: #000;
+      text-decoration: none;
+      margin: 0 10px;
       font-weight: 600;
+      transition: color 0.2s ease;
     }
 
-    a {
-      color: #0000EE;
-      text-decoration: underline;
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 2px;
+      background-color: #000;
+      transition: width 0.25s ease-in-out;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav span {
+      color: #666;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    p {
+      margin: 24px 0;
     }
 
     ul {
@@ -35,15 +72,6 @@
       margin-bottom: 6px;
     }
 
-    p {
-      margin: 24px 0; /* adds visual separation between paragraphs */
-    }
-
-    footer {
-      margin-top: 60px;
-      line-height: 1.7;
-    }
-
     .final-line {
       margin-top: 3rem;
       text-align: center;
@@ -52,11 +80,17 @@
       font-weight: normal;
     }
 
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-bottom: 20px;
+    }
+
     .contact {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 2rem; /* equal spacing between contact items */
+      gap: 2rem;
       margin-top: 1rem;
     }
 
@@ -73,32 +107,38 @@
 </head>
 <body>
 
-  <p><strong>I'm Ash Barrett.</strong></p>
+  <nav>
+    <a href="index.html"><strong>home</strong></a> <span>|</span> <a href="blog.html">blog</a>
+  </nav>
 
-  <p>I want to build leverage to enact change at a global scale. I believe this is done through technology and its governance.</p>
+  <main>
+    <p><strong>I'm Ash Barrett.</strong></p>
 
-  <p>I dropped out of <a href="https://www.ucla.edu/">UCLA</a> (Political Science/Philosophy; 4.0 GPA).</p>
+    <p>I want to build leverage to enact change at a global scale. I believe this is done through technology and its governance.</p>
 
-  <p>I am the Chief of Staff at <a href="https://www.build.ai/">Build</a>.</p>
+    <p>I dropped out of <a href="https://www.ucla.edu/">UCLA</a> (Political Science/Philosophy; 4.0 GPA).</p>
 
-  <ul>
-    <li>We believe that large-scale 3D world data will solve embodied AI.</li>
-    <li>We’re backed by HF0, Abstract Ventures, Pear VC, Z Fellows, and other great partners.</li>
-  </ul>
+    <p>I am the Chief of Staff at <a href="https://www.build.ai/">Build</a>.</p>
 
-  <p>I am the president of <a href="https://www.sigmaetapi.org/">Sigma Eta Pi</a>, UCLA's Premier Co-Ed Professional Entrepreneurship Fraternity.</p>
+    <ul>
+      <li>We believe that large-scale 3D world data will solve embodied AI.</li>
+      <li>We’re backed by HF0, Abstract Ventures, Pear VC, Z Fellows, and other great partners.</li>
+    </ul>
 
-  <ul>
-    <li>We host YC founders, HF0 residents, ODF fellows, Techstars founders, and KP fellows who have raised a collective $1.2B.</li>
-  </ul>
+    <p>I am the president of <a href="https://www.sigmaetapi.org/">Sigma Eta Pi</a>, UCLA's Premier Co-Ed Professional Entrepreneurship Fraternity.</p>
 
-  <p>I wrote policy and commentary on digital and technological governance for <a href="https://www.dentons.com/en/">Dentons</a>. It is currently hard-copied in Antitrust Reviews in the Czech Republic.</p>
+    <ul>
+      <li>We host YC founders, HF0 residents, ODF fellows, Techstars founders, and KP fellows who have raised a collective $1.2B.</li>
+    </ul>
 
-  <p>I volunteer a lot, mostly with <a href="https://uplift.org/">Uplift</a>. I also built and am launching a service for NPOs to streamline volunteer sourcing.</p>
+    <p>I wrote policy and commentary on digital and technological governance for <a href="https://www.dentons.com/en/">Dentons</a>. It is currently hard-copied in Antitrust Reviews in the Czech Republic.</p>
 
-  <p>I did <a href="https://www.linkedin.com/company/nivo-home/">sales</a> and debate. If I can't sell, I will just keep talking.</p>
+    <p>I volunteer a lot, mostly with <a href="https://uplift.org/">Uplift</a>. I also built and am launching a service for NPOs to streamline volunteer sourcing.</p>
 
-  <p class="final-line">I want to learn. I want to have asymmetric impact.</p>
+    <p>I did <a href="https://www.linkedin.com/company/nivo-home/">sales</a> and debate. If I can't sell, I will just keep talking.</p>
+
+    <p class="final-line">I want to learn. I want to have asymmetric impact.</p>
+  </main>
 
   <footer>
     <div class="contact">
