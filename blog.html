@@ -14,20 +14,118 @@
       display: flex; flex-direction: column; justify-content: space-between; align-items: center;
       text-align: center; overflow: hidden; max-width: 720px; margin: 0 auto; padding: 0 20px;
     }
-    nav { margin-top: 40px; letter-spacing: 0.02em; }
-    nav a { position: relative; color: #000; text-decoration: none; margin: 0 20px; font-weight: 400; text-transform: lowercase; transition: color 0.2s ease; }
-    nav a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 0%; height: 1px; background-color: #000; transition: width 0.25s ease-in-out; }
-    nav a:hover::after { width: 100%; }
-    nav a.active { font-weight: 600; }
-    main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    em { font-style: italic; margin-bottom: 8px; }
-    .chapter-title { margin-top: 6px; font-weight: 500; }
-    .chapter-title a { color: inherit; text-decoration: none; }
-    footer { text-align: center; border-top: 1px solid #ccc; padding-top: 14px; line-height: 1.8; margin-bottom: 10px; width: 100%; }
-    .footer-line { margin: 4px 0; }
-    .footer-line a, .footer-line span { color: #111; text-decoration: none; font-weight: 500; position: relative; margin: 0 8px; }
-    .footer-line a::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 0%; height: 1px; background-color: #111; transition: width 0.25s ease-in-out; }
-    .footer-line a:hover::after { width: 100%; }
+
+    nav {
+      margin-top: 40px;
+      letter-spacing: 0.02em;
+    }
+
+    nav a {
+      position: relative;
+      color: #000;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 400;
+      text-transform: lowercase;
+      transition: color 0.2s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+      transition: width 0.25s ease-in-out;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a.active {
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    em {
+      font-style: italic;
+      margin-bottom: 8px;
+    }
+
+    .chapter-title {
+      margin-top: 6px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .chapter-title a {
+      color: #000;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .chapter-title a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 1px;
+      background-color: #000;
+      transition: width 0.25s ease-in-out;
+    }
+
+    .chapter-title a:hover::after {
+      width: 100%;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid #ccc;
+      padding-top: 14px;
+      line-height: 1.8;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+    .footer-line {
+      margin: 4px 0;
+    }
+
+    .footer-line a,
+    .footer-line span {
+      color: #111;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      margin: 0 8px;
+    }
+
+    .footer-line a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0%;
+      height: 1px;
+      background-color: #111;
+      transition: width 0.25s ease-in-out;
+    }
+
+    .footer-line a:hover::after {
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -40,7 +138,9 @@
 
   <main>
     <em>coming soon</em>
-    <div class="chapter-title"><a href="manifesto.html"><strong>Chapter 0: The Manifesto</strong></a></div>
+    <div class="chapter-title">
+      <a href="manifesto.html"><strong>Chapter 0: The Manifesto</strong></a>
+    </div>
     <div class="chapter-title">Chapter I: "The Youth Yearn for Meditation"</div>
   </main>
 
@@ -49,11 +149,13 @@
       <a href="https://x.com/ashbarrettt">X</a> |
       <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
     </div>
+
     <div class="footer-line">
       <a href="mailto:ash@build.ai">ash@build.ai</a> |
       <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a> |
       <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
     </div>
+
     <div class="footer-line">
       <span>913-293-8404</span>
     </div>
