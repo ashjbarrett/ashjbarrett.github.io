@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Manifesto | Ash Barrett</title>
+  <link rel="icon" type="image/jpeg" href="image.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; }
+    body {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px; color: #111; background-color: #fff;
+      display: flex; flex-direction: column; justify-content: space-between;
+      max-width: 720px; margin: 0 auto; padding: 0 20px;
+    }
+    nav { text-align: center; margin-top: 40px; letter-spacing: 0.02em; }
+    nav a { position: relative; color: #000; text-decoration: none; margin: 0 20px; font-weight: 400; text-transform: lowercase; transition: color 0.2s ease; }
+    nav a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 0%; height: 1px; background-color: #000; transition: width 0.25s ease-in-out; }
+    nav a:hover::after { width: 100%; }
+    nav a.active { font-weight: 600; }
+    main { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+    main * { text-align: left; }
+    p { margin: 14px 0; line-height: 1.8; }
+    .title { font-weight: 700; }
+    footer { text-align: center; border-top: 1px solid #ccc; padding-top: 14px; line-height: 1.8; margin-bottom: 10px; }
+    .footer-line { margin: 4px 0; }
+    .footer-line a, .footer-line span { color: #111; text-decoration: none; font-weight: 500; position: relative; margin: 0 8px; }
+    .footer-line a::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 0%; height: 1px; background-color: #111; transition: width 0.25s ease-in-out; }
+    .footer-line a:hover::after { width: 100%; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">home</a> |
+    <a href="blog.html" class="active">blog</a> |
+    <a href="books.html">books</a>
+  </nav>
+
+  <main>
+    <p class="title"><strong>The Manifesto</strong></p>
+
+    <p>My manifesto can’t be written at this time. Currently, any personal declaration would not be a reference to maxims I have created through my own learned experience, but a regurgitation of those which I have read.</p>
+
+    <p><em>These days, when you're talking to one person, you're talking to a thousand.</em> - Beau Willimon</p>
+    <p><em>The best way to predict the future is to invent it.</em> - Alan Kay</p>
+    <p><em>Embrace accountability and take business risks under your own name. Society will reward you with responsibility, equity, and leverage.</em> - Naval Ravikant</p>
+    <p><em>Give me a lever long enough and a fulcrum on which to place it, and I shall move the world.</em> - Archimedes</p>
+    <p><em>Simplicity is the ultimate sophistication</em> - Leonardo da Vinci</p>
+    <p><em>Slow is smooth, smooth is fast</em> - Navy SEALs</p>
+    <p><em>Can you prove that you are?</em> - <strong>Transcendence</strong></p>
+
+    <p>As Naval Ravikant (more specifically, Eric Jorgenson) intelligently put, these maxims are effectively mnemonics that allow me to recall the principal wisdom of others.</p>
+
+    <p><em>It is my personal ambition to trade borrowed wisdom for my own.</em></p>
+  </main>
+
+  <footer>
+    <div class="footer-line">
+      <a href="https://x.com/ashbarrettt">X</a> |
+      <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
+    </div>
+    <div class="footer-line">
+      <a href="mailto:ash@build.ai">ash@build.ai</a> |
+      <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a> |
+      <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
+    </div>
+    <div class="footer-line">
+      <span>913-293-8404</span>
+    </div>
+  </footer>
+
+</body>
+</html>
