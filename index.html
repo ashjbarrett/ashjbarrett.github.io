@@ -8,12 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
     html, body {
-      height: 100%;
+      min-height: 100%;
       margin: 0;
       padding: 0;
     }
 
     body {
+      min-height: 100vh;
+      min-height: 100svh;
+      box-sizing: border-box;
       font-family: 'IBM Plex Mono', monospace;
       font-size: 14px;
       line-height: 1.8;
@@ -66,7 +69,39 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: center;
+      padding: 48px 0 36px;
+    }
+
+    .intro {
+      width: 100%;
+      max-width: 660px;
+      color: #555;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.85;
+    }
+
+    .intro p {
+      margin: 0 0 18px;
+    }
+
+    .intro a {
+      color: inherit;
+      font-weight: inherit;
+      text-decoration: underline;
+      text-decoration-color: #aaa;
+      text-underline-offset: 3px;
+    }
+
+    .intro a::after {
+      display: none;
+    }
+
+    .intro a:hover,
+    .intro a:focus-visible {
+      color: #111;
+      text-decoration-color: currentColor;
     }
 
     a {
@@ -111,11 +146,8 @@
     }
 
     .smile {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
+      margin: 24px 0 0;
+      text-align: center;
       font-size: clamp(80px, 15vw, 144px);
       line-height: 1;
     }
@@ -162,6 +194,11 @@
 
 
   <main>
+    <div class="intro">
+      <p>Hi! My name is Ashley, or Ash. I am graduating from UCLA this year and plan to attend law school. I am super excited to dive into my interests, which have been born from the culmination of some incredibly fun and surprising years in college. Most applicable to my law career is the amazing opportunity that I had to intern as a Policy Analyst with <a href="https://www.dentons.com/en/global-presence/central-and-eastern-europe/czech-republic/prague">Dentons</a>!</p>
+      <p>But, most notable and most transformative was the time that I left UCLA to pursue the creation of two distinct companies, <a href="https://www.build.ai/">Build</a> and <a href="https://abundance.company/">Abundance</a>. I learned so many valuable lessons at both companies about building teams, finding myself in rooms I didn't think I belonged in, and creating things from first principles. However, I also learned a lot about the flaws of regulation in these areas, themes that are so serendipitously related to the work I did with Dentons.</p>
+      <p>While that's what I plan to pursue professionally, I still carve time for triathlon training, golfing, watching football, and spending time with my friends and family. I love to read and write, my Twitter and Substack are both below; they represent differing degrees of seriousness :). I've been asked before why I have a personal website, and I think that's very easy to explain. A lot of things can be understood from someone's LinkedIn or social media, but it's very rare to catch a glimpse of their voice. I hope you were able to get a sense of mine.</p>
+    </div>
     <p class="smile">:)</p>
   </main>
 
