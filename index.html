@@ -152,18 +152,47 @@
 
     .smile {
       position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      inset: 0;
       z-index: 0;
-      margin: 0;
+      overflow: hidden;
       color: #111;
       opacity: 0.055;
-      font-size: min(65vw, 75svh, 720px);
-      line-height: 1;
-      white-space: nowrap;
       pointer-events: none;
       user-select: none;
+    }
+
+    .smile-eye {
+      position: absolute;
+      left: max(24px, calc(50% - 440px));
+      width: clamp(24px, 4.5vw, 64px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: currentColor;
+      transform: translate(-50%, -50%);
+    }
+
+    .smile-eye:first-child { top: 32%; }
+    .smile-eye:nth-child(2) { top: 68%; }
+
+    .smile-mouth {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 0 36px; }
+      main { padding: 36px 0; }
+      .smile { opacity: 0.045; }
+      .smile-eye {
+        left: 13px;
+        width: 18px;
+      }
+      .footer-line a,
+      .footer-line span {
+        overflow-wrap: anywhere;
+      }
     }
 
     /* === FOOTER === */
@@ -215,7 +244,13 @@
       <p>But, most notable and most transformative was the time that I left UCLA to pursue the creation of two distinct companies, <a href="https://www.build.ai/">Build</a> and <a href="https://abundance.company/">Abundance</a>. I learned so many valuable lessons at both companies about building teams, finding myself in rooms I didn't think I belonged in, and creating things from first principles. However, I also learned a lot about the flaws of regulation in these areas, themes that are so serendipitously related to the work I did with Dentons.</p>
       <p>While that's what I plan to pursue professionally, I still carve time for triathlon training, golfing, watching football, and spending time with my friends and family. I love to read and write, my Twitter and Substack are both below; they represent differing degrees of seriousness :). I've been asked before why I have a personal website, and I think that's very easy to explain. A lot of things can be understood from someone's LinkedIn or social media, but it's very rare to catch a glimpse of their voice. I hope you were able to get a sense of mine.</p>
     </div>
-    <p class="smile" aria-hidden="true">:)</p>
+    <div class="smile" aria-hidden="true">
+      <span class="smile-eye"></span>
+      <span class="smile-eye"></span>
+      <svg class="smile-mouth" viewBox="0 0 1000 1000" preserveAspectRatio="none" focusable="false">
+        <path d="M 650 -180 C 1080 140, 1080 860, 650 1180" fill="none" stroke="currentColor" stroke-width="55" stroke-linecap="round" />
+      </svg>
+    </div>
   </main>
 
   <footer>
