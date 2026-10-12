@@ -14,6 +14,7 @@
     }
 
     body {
+      isolation: isolate;
       min-height: 100vh;
       min-height: 100svh;
       box-sizing: border-box;
@@ -70,10 +71,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 48px 0 36px;
+      justify-content: center;
+      padding: 48px 0;
     }
 
     .intro {
+      position: relative;
+      z-index: 1;
+      text-align: center;
       width: 100%;
       max-width: 660px;
       color: #555;
@@ -146,14 +151,25 @@
     }
 
     .smile {
-      margin: 24px 0 0;
-      text-align: center;
-      font-size: clamp(80px, 15vw, 144px);
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      margin: 0;
+      color: #111;
+      opacity: 0.055;
+      font-size: min(65vw, 75svh, 720px);
       line-height: 1;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
     }
 
     /* === FOOTER === */
     footer {
+      position: relative;
+      z-index: 1;
       text-align: center;
       border-top: 1px solid #ccc;
       padding-top: 14px;
@@ -199,7 +215,7 @@
       <p>But, most notable and most transformative was the time that I left UCLA to pursue the creation of two distinct companies, <a href="https://www.build.ai/">Build</a> and <a href="https://abundance.company/">Abundance</a>. I learned so many valuable lessons at both companies about building teams, finding myself in rooms I didn't think I belonged in, and creating things from first principles. However, I also learned a lot about the flaws of regulation in these areas, themes that are so serendipitously related to the work I did with Dentons.</p>
       <p>While that's what I plan to pursue professionally, I still carve time for triathlon training, golfing, watching football, and spending time with my friends and family. I love to read and write, my Twitter and Substack are both below; they represent differing degrees of seriousness :). I've been asked before why I have a personal website, and I think that's very easy to explain. A lot of things can be understood from someone's LinkedIn or social media, but it's very rare to catch a glimpse of their voice. I hope you were able to get a sense of mine.</p>
     </div>
-    <p class="smile">:)</p>
+    <p class="smile" aria-hidden="true">:)</p>
   </main>
 
   <footer>
