@@ -29,27 +29,18 @@
       transition: opacity 240ms ease;
     }
 
-    .cursor-glow::before, .cursor-glow::after {
+    .cursor-glow::before {
       content: "";
       position: absolute;
       left: -90px;
       top: -90px;
       width: 180px;
       height: 180px;
-      background: radial-gradient(ellipse, rgb(255 255 255 / 10%), transparent 70%);
+      background: radial-gradient(circle, rgb(255 255 255 / 18%), transparent 70%);
       transform: translate(var(--x, 0px), var(--y, 0px));
     }
 
-    .cursor-glow::after {
-      width: 120px;
-      height: 120px;
-      left: -60px;
-      top: -60px;
-    }
-
     .cursor-glow.visible { opacity: 1; }
-    .cursor-glow.visible::before { transition: transform 420ms ease-out; }
-    .cursor-glow.visible::after { transition: transform 160ms ease-out; }
 
     @media (prefers-reduced-motion: reduce) {
       .cursor-glow { display: none; }
@@ -108,11 +99,7 @@
       }
       glow.style.setProperty("--x", event.clientX + "px");
       glow.style.setProperty("--y", event.clientY + "px");
-      if (!glow.classList.contains("visible")) {
-        // Position both layers before enabling their trailing transitions.
-        getComputedStyle(glow, "::before").transform;
-        glow.classList.add("visible");
-      }
+      glow.classList.add("visible");
     });
     document.documentElement.addEventListener("pointerleave", hideGlow);
     window.addEventListener("blur", hideGlow);
