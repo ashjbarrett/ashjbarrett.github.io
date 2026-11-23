@@ -1,278 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ash Barrett</title>
   <link rel="icon" type="image/jpeg" href="image.jpeg">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap">
   <style>
-    html, body {
-      min-height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      isolation: isolate;
+      margin: 0;
       min-height: 100vh;
       min-height: 100svh;
-      box-sizing: border-box;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 14px;
-      line-height: 1.8;
-      color: #111;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 20px;
+      display: grid;
+      place-items: center;
+      background: #000;
+      color: #fff;
+      font: 14px/1.5 "IBM Plex Mono", monospace;
     }
 
     nav {
-      text-align: center;
-      margin-top: 40px;
-      letter-spacing: 0.02em;
-    }
-
-    nav a {
-      position: relative;
-      color: #000;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: 400;
-      text-transform: lowercase;
-      transition: color 0.2s ease;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      width: 0%;
-      height: 1px;
-      background-color: #000;
-      transition: width 0.25s ease-in-out;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    nav a.active {
-      font-weight: 600;
-    }
-
-    main {
-      flex: 1;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      padding: 48px 0;
-    }
-
-    .intro {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      width: 100%;
-      max-width: 660px;
-      color: #555;
-      font-size: 13px;
-      font-weight: 400;
-      line-height: 1.85;
-    }
-
-    .intro p {
-      margin: 0 0 18px;
-    }
-
-    .intro a {
-      color: inherit;
-      font-weight: inherit;
-      text-decoration: underline;
-      text-decoration-color: #aaa;
-      text-underline-offset: 3px;
-    }
-
-    .intro a::after {
-      display: none;
-    }
-
-    .intro a:hover,
-    .intro a:focus-visible {
-      color: #111;
-      text-decoration-color: currentColor;
+      align-items: center;
+      gap: clamp(6px, 2vw, 24px);
     }
 
     a {
-      color: #0055ff;
+      padding-block: 12px;
+      color: inherit;
       text-decoration: none;
-      font-weight: 500;
-      position: relative;
+      white-space: nowrap;
     }
 
-    a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 0%;
-      height: 1px;
-      background-color: #0055ff;
-      transition: width 0.25s ease-in-out;
+    a:hover, a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
-    a:hover::after {
-      width: 100%;
-    }
+    .short { display: none; }
 
-    p {
-      margin: 14px 0;
-    }
-
-    ul {
-      margin: -4px 0 12px 20px;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 3px;
-    }
-
-    .final-line {
-      margin-top: 1rem;
-      text-align: center;
-      font-style: italic;
-    }
-
-    .smile {
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      overflow: hidden;
-      color: #111;
-      opacity: 0.055;
-      pointer-events: none;
-      user-select: none;
-    }
-
-    .smile-eye {
-      position: absolute;
-      left: max(24px, calc(50% - 440px));
-      width: clamp(24px, 4.5vw, 64px);
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: currentColor;
-      transform: translate(-50%, -50%);
-    }
-
-    .smile-eye:first-child { top: 32%; }
-    .smile-eye:nth-child(2) { top: 68%; }
-
-    .smile-mouth {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    @media (min-width: 601px) and (max-width: 800px) {
-      body { padding: 0 48px; }
-    }
-
-    @media (max-width: 600px) {
-      body { padding: 0 36px; }
-      main { padding: 36px 0; }
-      .smile { opacity: 0.045; }
-      .smile-eye {
-        left: 13px;
-        width: 18px;
-      }
-      .footer-line a,
-      .footer-line span {
-        overflow-wrap: anywhere;
-      }
-    }
-
-    /* === FOOTER === */
-    footer {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      border-top: 1px solid #ccc;
-      padding-top: 14px;
-      line-height: 1.8;
-      margin-bottom: 10px;
-    }
-
-    .footer-line {
-      margin: 4px 0;
-    }
-
-    .footer-line a,
-    .footer-line span {
-      color: #111;
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
-      margin: 0 8px;
-    }
-
-    .footer-line a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-      width: 0%;
-      height: 1px;
-      background-color: #111;
-      transition: width 0.25s ease-in-out;
-    }
-
-    .footer-line a:hover::after {
-      width: 100%;
+    @media (max-width: 760px) {
+      .full { display: none; }
+      .short { display: inline; }
+      nav { font-size: clamp(12px, 3.5vw, 14px); }
     }
   </style>
 </head>
 <body>
-
-
   <main>
-    <div class="intro">
-      <p>Hi! My name is Ashley, or Ash. I am graduating from UCLA this year and plan to attend law school. I am super excited to dive into my interests, which have been born from the culmination of some incredibly fun and surprising years in college. Most applicable to my law career is the amazing opportunity that I had to intern as a Policy Analyst with <a href="https://www.dentons.com/en/global-presence/central-and-eastern-europe/czech-republic/prague">Dentons</a>!</p>
-      <p>But, most notable and most transformative was the time that I left UCLA to pursue the creation of two distinct companies, <a href="https://www.build.ai/">Build</a> and <a href="https://abundance.company/">Abundance</a>. I learned so many valuable lessons at both companies about building teams, finding myself in rooms I didn't think I belonged in, and creating things from first principles. However, I also learned a lot about the flaws of regulation in these areas, themes that are so serendipitously related to the work I did with Dentons.</p>
-      <p>While that's what I plan to pursue professionally, I still carve time for triathlon training, golfing, watching football, and spending time with my friends and family. I love to read and write, my Twitter and Substack are both below; they represent differing degrees of seriousness :). I've been asked before why I have a personal website, and I think that's very easy to explain. A lot of things can be understood from someone's LinkedIn or social media, but it's very rare to catch a glimpse of their voice. I hope you were able to get a sense of mine.</p>
-    </div>
-    <div class="smile" aria-hidden="true">
-      <span class="smile-eye"></span>
-      <span class="smile-eye"></span>
-      <svg class="smile-mouth" viewBox="0 0 1000 1000" preserveAspectRatio="none" focusable="false">
-        <path d="M 650 -180 C 1080 140, 1080 860, 650 1180" fill="none" stroke="currentColor" stroke-width="55" stroke-linecap="round" />
-      </svg>
-    </div>
-  </main>
-
-  <footer>
-    <div class="footer-line">
-      <a href="https://x.com/ashbarrettt">X</a> |
-      <a href="https://substack.com/@ashjbarrett">Substack</a> |
+    <nav aria-label="Ash Barrett's profiles and contact information">
+      <a href="https://x.com/ashbarrettt">X</a>
+      <a href="https://substack.com/@ashjbarrett">Substack</a>
       <a href="https://www.linkedin.com/in/ash-barrett/">LinkedIn</a>
-    </div>
-
-    <div class="footer-line">
-      <a href="mailto:ashjbarrett@gmail.com">ashjbarrett@gmail.com</a> |
-      <a href="mailto:ashbarrett@ucla.edu">ashbarrett@ucla.edu</a>
-    </div>
-
-    <div class="footer-line">
-      <span>913-293-8404</span>
-    </div>
-  </footer>
-
+      <a href="mailto:ashjbarrett@gmail.com" aria-label="Gmail: ashjbarrett@gmail.com"><span class="full">ashjbarrett@gmail.com</span><span class="short">Gmail</span></a>
+      <a href="mailto:ashbarrett@ucla.edu" aria-label="UCLA email: ashbarrett@ucla.edu"><span class="full">ashbarrett@ucla.edu</span><span class="short">UCLA</span></a>
+      <a href="tel:+19132938404" aria-label="Phone: 913-293-8404"><span class="full">913-293-8404</span><span class="short">Phone</span></a>
+    </nav>
+  </main>
 </body>
 </html>
